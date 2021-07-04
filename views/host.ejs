@@ -1,0 +1,20 @@
+<h1>Room: <span id="roomCode"></span></h1>
+
+<div class="input-url">
+  Video ID:
+  <input type="text" id="videoID" />
+</div>
+
+<div class="buttons-wrap">
+  <div class="buttons">
+    <button class="btn btn-play" id="playBtn"><i class="fas fa-play-circle"></i> Play</button>
+    <button class="btn btn-pause" id="pauseBtn"><i class="fas fa-pause-circle"></i> Pause</button>
+  </div>
+</div>
+
+<script>
+  const roomCode = String(Math.floor(Math.random() * 1000))
+</script>
+<script src="/js/main.js"></script>
+<script src="/js/host.js"></script>
+<script src="https://kit.fontawesome.com/5edd468754.js" crossorigin="anonymous"></script>

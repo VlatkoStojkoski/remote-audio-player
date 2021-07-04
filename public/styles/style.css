@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;700&family=Roboto+Slab:wght@300;400;600&display=swap");
+.hide {
+  display: none;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+  width: 70%;
+  margin: 0 auto;
+  padding-bottom: 5em;
+}
+
+h1 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 4em;
+  font-family: "Roboto Slab", sans-serif;
+}
+
+.btn {
+  cursor: pointer;
+  display: block;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  color: inherit;
+  padding: 0.3em 0.7em;
+}
+
+.btn:hover {
+  -webkit-filter: brightness(92%);
+          filter: brightness(92%);
+}
+
+.btn:active {
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+  -webkit-transform: translateY(5px);
+          transform: translateY(5px);
+}
+
+.buttons-wrap {
+  margin: 0 auto;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  -webkit-column-gap: 1rem;
+          column-gap: 1rem;
+}
+
+.buttons .btn {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  color: white;
+  font-size: 1.25em;
+}
+
+.buttons .btn-play {
+  background: #df1626;
+}
+
+.buttons .btn-pause {
+  background: #4028f3;
+}
+
+.action-container {
+  margin: 0 auto;
+  min-width: 50%;
+  max-width: 60%;
+  padding: 1em;
+  color: white;
+}
+
+.action-container h2 {
+  font-size: 1.9em;
+  margin: 0;
+}
+
+.action-container.host-container {
+  background: #f3284a;
+}
+
+.action-container.host-container p {
+  text-align: justify;
+}
+
+.action-container.host-container .host-btn {
+  background: #4028f3;
+  font-size: 1.1em;
+}
+
+.action-container.join-container {
+  background: #ac28f3;
+  margin-top: 3em;
+}
+
+.action-container.join-container .room-code {
+  border: none;
+  outline: none;
+  padding: 0.5em;
+  margin-top: 1.3em;
+  min-width: 50%;
+  font-size: 0.9em;
+}
+
+.action-container.join-container .join-btn {
+  background: #6ff328;
+  color: #1e1e1e;
+  font-weight: bold;
+  margin-top: 0.6em;
+  font-size: 0.9em;
+}
+
+#roomCode {
+  font-style: italic;
+  font-weight: 300;
+}
+
+.allow-sound-modal {
+  position: absolute;
+  top: 3rem;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  padding: 1.5rem 1.25rem;
+  background: #fff;
+  border-radius: 0.75rem;
+}
+
+.allow-sound-modal .modal-title {
+  font-size: 2.5rem;
+  margin: 0 0 0.75rem;
+}
+
+.allow-sound-modal .btn {
+  font-size: 1.125rem;
+  margin: 0 auto;
+  background: #f3284a;
+  color: #fff;
+}
+
+.modal-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(100, 100, 100, 0.5);
+  -webkit-backdrop-filter: blur(2px);
+          backdrop-filter: blur(2px);
+}
+
+.input-url {
+  font-weight: bold;
+  font-size: 1.2em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1em 0 3em;
+}
+
+.input-url .btn {
+  display: inline-block;
+  padding: 0;
+  font-size: 1em;
+  background: transparent;
+}
+
+.input-url .btn:active {
+  -webkit-filter: brightness(85%);
+          filter: brightness(85%);
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+}
+
+.input-url .btn img {
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
+  height: 1.5em;
+}
+
+.input-url .sounds {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  font-family: inherit;
+  color: inherit;
+  padding: 0.3em 0.7em;
+  background: #6d4fbf;
+  color: white;
+}
+
+.animated-gif {
+  width: 80%;
+  max-width: 500px;
+  display: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#player {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    width: 90%;
+  }
+  .action-container {
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .action-container {
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

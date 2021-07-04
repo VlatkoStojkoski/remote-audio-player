@@ -1,0 +1,16 @@
+<h1>Remote Player</h1>
+<div class="action-container host-container">
+  <h2>Host a Room</h2>
+  <p>After clicking the "Host" button you'll get a 9 digit room code which you can enter in the device where the media
+    will play</p>
+  <form action="/host" method="GET">
+    <input type="submit" class="host-btn btn" value="Host">
+  </form>
+</div>
+<div class="action-container join-container">
+  <h2>Join Room</h2>
+  <form action="/join" method="GET">
+    <input type="tel" name="roomCode" class="room-code" pattern="\d\d\d" maxlength="11" placeholder="123" required>
+    <input type="submit" class="join-btn btn" value="Join">
+  </form>
+</div>
