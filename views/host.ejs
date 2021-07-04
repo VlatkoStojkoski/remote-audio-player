@@ -13,7 +13,7 @@
 </div>
 
 <script>
-  const roomCode = String(Math.floor(Math.random() * 1000))
+  const roomCode = Math.random().toString(10).substr(2, 3);
 </script>
 <script src="/js/main.js"></script>
 <script src="/js/host.js"></script>

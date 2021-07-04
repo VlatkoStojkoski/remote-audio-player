@@ -107,6 +107,35 @@ h1 {
       font-size: 0.9em;
     }
   }
+
+  &.sessions-container {
+    background: #e0e0e0;
+    color: #1e1e1e;
+    margin-top: 3em;
+
+    ul {
+      padding: 0;
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      row-gap: 1rem;
+
+      li {
+        padding: .25rem .5rem;
+        background: #fff;
+        color: #000000;
+        font-size: 1.25rem;
+        font-weight: bold;
+        
+        .opened-time {
+          vertical-align: middle;
+          font-size: 1rem;
+          font-style: italic;
+          font-weight: normal;
+        }
+      }
+    }
+  }
 }
 
 #roomCode {
