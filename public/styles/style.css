@@ -250,6 +250,10 @@ h1 {
   pointer-events: none;
 }
 
+.room-link {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 480px) {
   body {
     width: 90%;

@@ -1,3 +1,5 @@
+/* global roomCode, io */
+
 document.querySelector('#roomCode').innerText = roomCode;
 document.title = `Room: ${roomCode}`;
 

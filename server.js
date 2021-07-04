@@ -1,6 +1,5 @@
 const express = require('express');
 const partials = require('express-partials');
-const socket = require('socket.io');
 
 const app = express();
 app.use(express.static('public'));
@@ -20,6 +19,7 @@ app.get('/join', (req, res) => {
 });
 
 const ytdl = require('ytdl-core');
+
 app.get('/get-audio', (req, res) => {
   const requestUrl = `http://youtube.com/watch?v=${req.query.videoId}`;
 
@@ -27,7 +27,7 @@ app.get('/get-audio', (req, res) => {
     ytdl(requestUrl, { filter: 'audioonly' })
       .pipe(res);
   } catch (err) {
-    console.error(errr);
+    console.error(err);
     res.status(500).json({ error: err });
   }
 });
@@ -35,18 +35,23 @@ app.get('/get-audio', (req, res) => {
 const PORT = process.env.PORT || 3000;
 const server = app.listen(PORT, console.log(`Listening on port ${PORT}`));
 
-const io = socket(server);
+const socketIO = require('socket.io');
+
+const io = socketIO(server);
 
 const rooms = Array.from({ length: 10 }).fill([null, null]);
 // setInterval(() => console.table(openRooms), 5000);
 
-io.on('connection', socket => {
+io.on('connection', (socket) => {
   socket.on('join', (room) => {
     console.log(`Joining room "${room}"`);
 
     socket.join(room);
 
-    if (room !== '000') {
+    if (
+      room !== '000'
+      && !rooms.filter(([roomCode]) => roomCode === room).length
+    ) {
       rooms.pop();
       rooms.unshift([room, Date.now()]);
     }
