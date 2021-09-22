@@ -14,7 +14,7 @@ const updateData = (data) => {
     if (!room) return;
 
     document.querySelector('#sessionsTable').innerHTML
-      += `<a class="room-link" href="http://localhost:3000/join?roomCode=${room}">\
+      += `<a class="room-link" href="/join?roomCode=${room}">\
             <li>\
               ${room} \
               <span class="opened-time">\

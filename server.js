@@ -40,7 +40,6 @@ const socketIO = require('socket.io');
 const io = socketIO(server);
 
 const rooms = Array.from({ length: 10 }).fill([null, null]);
-// setInterval(() => console.table(openRooms), 5000);
 
 io.on('connection', (socket) => {
   socket.on('join', (room) => {
